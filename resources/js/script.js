@@ -67,6 +67,22 @@ $(document).ready(function() {
         offset: '50%'
     });
 
+    /* Mobile nav */
+    $('.js--nav-icon').click(function() {
+        var nav = $('.js--main-nav');
+        var icon = $('.js--nav-icon i');
+
+        nav.slideToggle(200);
+        if (icon.hasClass('icon ion-ios-menu')) {
+            icon.addClass('icon ion-md-close');
+            icon.removeClass('icon ion-ios-menu');
+        } else {
+            icon.addClass('icon ion-ios-menu');
+            icon.removeClass('icon ion-md-close');
+        }
+
+    });
+
 });
 
 
